@@ -1,3 +1,4 @@
+import PrivateNotes from "../../components/PrivateNotes"; // ajuste o caminho relativo conforme sua árvore
 import React from "react";
 import { useParams } from "react-router-dom";
 import Grid from "@material-ui/core/Grid";
@@ -105,3 +106,4 @@ const Chat = () => {
 };
 
 export default Chat;
+
