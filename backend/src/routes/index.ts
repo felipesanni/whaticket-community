@@ -27,3 +27,10 @@ routes.use(quickAnswerRoutes);
 routes.use("/api/messages", apiRoutes);
 
 export default routes;
+
+const TicketNoteController = require("../controllers/TicketNoteController");
+
+// Notas particulares do ticket
+routes.get("/tickets/:ticketId/notes", isAuth, TicketNoteController.list);
+routes.post("/tickets/:ticketId/notes", isAuth, TicketNoteController.create);
+routes.delete("/tickets/notes/:id", isAuth, TicketNoteController.remove);
